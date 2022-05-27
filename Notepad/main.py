@@ -24,6 +24,19 @@ window.title('Notepad')
 window.geometry('1280x720')
 window.minsize(width=1280, height=720)
 
+
+# Criando um frame
+frame = tkinter.Frame(window, height=30)
+frame.pack(fill='x')
+
+font_text = tkinter.Label(frame ,text='Fonte:')
+font_text.pack(side='left')
+
+spin_font_size = tkinter.Spinbox(frame, values=('Arial', 'Verdana'), width=10)
+spin_font_size.pack(side='left')
+
+font_size = tkinter.Label(frame, text='Font size')
+
 # Criar uma área de texto
 text_area = tkinter.Text(window, font='Arial 20 bold', width=1280, height=720)
 text_area.pack()
