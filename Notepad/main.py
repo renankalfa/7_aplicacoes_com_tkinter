@@ -2,15 +2,20 @@ import tkinter
 
 
 def NewFile():
-    print('Crie um novo arquivo')
+    text_area.delete(1.0, 'end')
 
 
 def SaveFile():
-    print('Salvo um novo arquivo')
+    conteiner = text_area.get(1.0, 'end')
+    file = open('notepad.txt', 'w')
+    file.write(conteiner)
+    file.close()
 
 
-def Save_as():
-    print('Salvar como')
+def Open_doc():
+    file = open('notepad.txt', 'r')
+    conteiner = file.read()
+    text_area.insert(1.0, conteiner)
 
 
 # Gerar a janela
@@ -30,7 +35,7 @@ main_menu = tkinter.Menu(window)
 file_menu = tkinter.Menu(main_menu, tearoff=0)
 file_menu.add_command(label='New', command=NewFile)
 file_menu.add_command(label='Save', command=SaveFile)
-file_menu.add_command(label='Save as ...', command=Save_as)
+file_menu.add_command(label='Open', command=Open_doc)
 file_menu.add_command(label='Exit', command=window.quit)
 
 main_menu.add_cascade(label='File', menu=file_menu)
