@@ -8,7 +8,7 @@ class App:
         self.valor = 20
 
         self.window = tkinter.Tk()
-        self.window.title('Marcador')
+        self.window.title('Marcador de Vida')
         self.window.minsize(width=360, height=320)
         self.window.maxsize(width=360, height=320)
 
