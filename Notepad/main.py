@@ -32,7 +32,7 @@ def UptateFont():
 window = tkinter.Tk()
 window.title('Notepad')
 window.geometry('1280x720')
-window.minsize(width=1280, height=720)
+# window.minsize(width=1280, height=720)
 
 
 # Criando um frame
