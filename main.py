@@ -13,5 +13,5 @@ text_area.pack()
 main_menu = tkinter.Menu(window)
 main_menu.add_cascade(label='File')
 window.config(menu=main_menu)
-
+# dssd
 window.mainloop()
