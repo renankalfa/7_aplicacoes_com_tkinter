@@ -3,6 +3,7 @@ import tkinter
 
 def NewFile():
     text_area.delete(1.0, 'end')
+    return None
 
 
 def SaveFile():
@@ -10,12 +11,21 @@ def SaveFile():
     file = open('notepad.txt', 'w')
     file.write(conteiner)
     file.close()
+    return None
 
 
 def Open_doc():
     file = open('notepad.txt', 'r')
     conteiner = file.read()
     text_area.insert(1.0, conteiner)
+    return None
+
+
+def UptateFont():
+    size = spin_size.get()
+    font = spin_font.get()
+    text_area.config(font=f'{font} {size}')
+    return None
 
 
 # Gerar a janela
@@ -29,13 +39,20 @@ window.minsize(width=1280, height=720)
 frame = tkinter.Frame(window, height=30)
 frame.pack(fill='x')
 
-font_text = tkinter.Label(frame ,text='Fonte:')
+font_text = tkinter.Label(frame ,text='Fonte: ')
 font_text.pack(side='left')
 
-spin_font_size = tkinter.Spinbox(frame, values=('Arial', 'Verdana'), width=10)
-spin_font_size.pack(side='left')
+spin_font = tkinter.Spinbox(frame, values=('Arial', 'Verdana'), width=10)
+spin_font.pack(side='left')
 
-font_size = tkinter.Label(frame, text='Font size')
+font_size = tkinter.Label(frame, text='Font size: ')
+font_size.pack(side='left')
+
+spin_size = tkinter.Spinbox(frame, from_=0, to=60, width=5)
+spin_size.pack(side='left')
+
+botton_update = tkinter.Button(frame, text='Update', command=UptateFont)
+botton_update.pack(side='left')
 
 # Criar uma área de texto
 text_area = tkinter.Text(window, font='Arial 20 bold', width=1280, height=720)
