@@ -70,11 +70,11 @@ class Calc:
 
         self.button_multi = Button(self.frame, bg='orange', text='x', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=lambda: self.touch('x'), fg='white')
+                                 command=lambda: self.touch('*'), fg='white')
 
         self.button_equal = Button(self.frame, bg='orange', text='=', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=lambda: self.touch('='), fg='white')
+                                 command=self.total, fg='white')
 
         self.button_clean = Button(self.frame, bg='orange', text='C', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
@@ -110,5 +110,10 @@ class Calc:
 
     def Clean(self):
         self.screen_numbers.delete(0, END)
+
+    def total(self):
+        valor = eval(self.screen_numbers.get())
+        self.screen_numbers.delete(0, END)
+        self.screen_numbers.insert(0, str(valor))
 
 Calc()
