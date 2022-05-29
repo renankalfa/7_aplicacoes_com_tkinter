@@ -34,3 +34,7 @@ Um notepad simples onde o usuário pode, além de escrever, fazer uso das seguin
 - Damage: o personagem sofre 1 de vida.
 
 ![Marcador de vida](https://user-images.githubusercontent.com/97196457/170773847-cdd6d041-85d7-42a7-bd4b-b916325a8c73.png)
+
+#
+
+<a href="#top">Back to top</a>
