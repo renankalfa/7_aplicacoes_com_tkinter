@@ -1,4 +1,4 @@
-# 7 Aplicações com o Tkinter
+# 7 Aplicações com Interface Gráfica com Tkinter
 
 Com base no curso [Desenvolva 7 aplicações Python com Tkinter](https://www.udemy.com/course/desenvolva-7-aplicacoes-python-do-zero-a-publicacao/), vou desenvolver 7 aplicações com uma interface gráfica com **Python** e a biblioteca **Tkinter**. É algo que eu me interesso em aprender e me dará mais possibilidades de projetos tanto pessoais como para a empresa em que eu estiver trabalhando.
 
