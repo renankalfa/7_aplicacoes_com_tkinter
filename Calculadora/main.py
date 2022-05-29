@@ -1,6 +1,5 @@
 from tkinter import *
 
-# Teste github
 
 class Calc:
 
