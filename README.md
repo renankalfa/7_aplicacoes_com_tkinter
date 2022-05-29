@@ -17,6 +17,10 @@ Um notepad simples onde o usuário pode, além de escrever, fazer uso das seguin
 
 # 2. Calculadora
 
+Uma calculadora simples com funções simples. O usuário tanto pode clicar nos botões e escrever a conta a ser calculada como ele mesmo digitar pelo telcado.
+
+![calculadora](https://user-images.githubusercontent.com/97196457/170888664-5b9d3c5b-fda8-433d-bd84-75ac97f755b1.png)
+
 # 3. App de Desenho
 
 # 4. Donwload de Vídeos
