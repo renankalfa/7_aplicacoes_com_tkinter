@@ -101,8 +101,6 @@ class Calc:
         self.button_sub.grid(row=3, column=1, padx=1, pady=1)
         self.button_dot.grid(row=3, column=0, padx=1, pady=1)
 
-
-
         self.window.mainloop()
 
     def touch(self, num):
