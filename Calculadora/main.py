@@ -58,31 +58,31 @@ class Calc:
 
         self.button_add = Button(self.frame, bg='orange', text='+', bd=0,
                                font='Arial 20 bold', width=3, height=1,
-                               command=lambda: self.touch('+'), fg='white')
+                               command=lambda: self.touch('+'), fg='black')
 
         self.button_sub = Button(self.frame, bg='orange', text='-', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=lambda: self.touch('-'), fg='white')
+                                 command=lambda: self.touch('-'), fg='black')
 
         self.button_division = Button(self.frame, bg='orange', text='/', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=lambda: self.touch('/'), fg='white')
+                                 command=lambda: self.touch('/'), fg='black')
 
         self.button_multi = Button(self.frame, bg='orange', text='x', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=lambda: self.touch('*'), fg='white')
+                                 command=lambda: self.touch('*'), fg='black')
 
         self.button_equal = Button(self.frame, bg='orange', text='=', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=self.total, fg='white')
+                                 command=self.total, fg='black')
 
         self.button_clean = Button(self.frame, bg='orange', text='C', bd=0,
                                  font='Arial 20 bold', width=3, height=1,
-                                 command=self.Clean, fg='white')
+                                 command=self.Clean, fg='black')
 
         self.button_dot = Button(self.frame, bg='orange', text=',', bd=0,
                                    font='Arial 20 bold', width=3, height=1,
-                                   command=lambda: self.touch(','), fg='white')
+                                   command=lambda: self.touch(','), fg='black')
 
         self.button_1.grid(row=0, column=0, padx=1, pady=1)
         self.button_2.grid(row=0, column=1, padx=1, pady=1)
