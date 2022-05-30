@@ -33,7 +33,7 @@ class Paintk:
         self.text_pen_size = Label(self.bar_menu, text='Size: ', fg='white', bg='#3b3b3b')
         self.text_pen_size.pack(side='left')
 
-        self.pens_size = Spinbox(self.bar_menu, from_=1, to=50)
+        self.pens_size = Spinbox(self.bar_menu, from_=1, to=50, width=5)
         self.pens_size.pack(side='left')
 
         self.text_brushs = Label(self.bar_menu, text='Brushs: ', bg='#3b3b3b', fg='white')
@@ -47,13 +47,11 @@ class Paintk:
         self.button_eraser.pack(side='left')
 
         self.text_options = Label(self.bar_menu, text='Options: ', bg='#3b3b3b', fg='white')
-        self.text_options.pack(side='left')
-
         self.button_save = Button(self.bar_menu, image=self.img_save, bd=0)
         self.button_new = Button(self.bar_menu, image=self.img_new, bd=0)
-        self.button_save.pack(side='left')
-        self.button_new.pack(side='left')
-
+        self.button_save.pack(side='right')
+        self.button_new.pack(side='right')
+        self.text_options.pack(side='right')
 
         self.area_draw = Canvas(self.window, height=720)
         self.area_draw.pack(fill='both')
