@@ -12,6 +12,9 @@ class DownTk:
 
         self.img_logo = PhotoImage(file='assets/logo.png')
 
+        self.audio = False
+        self.video = False
+
         self.frame = Frame(self.window, bg='#3b3b3b', pady=80)
         self.frame.pack(fill='x')
 
@@ -34,9 +37,28 @@ class DownTk:
         self.frame3 = Frame(self.window)
         self.frame3.pack()
 
-        self.radio1 = Radiobutton(self.frame3)
+        self.radio1 = Radiobutton(self.frame3, text='Audio', value=0, command=self.validate_audio)
+        self.radio1.pack(side='left')
+
+        self.radio2 = Radiobutton(self.frame3, text='Vídeo', value=1, command=self.validate_video)
+        self.radio2.pack(side='left')
+
+        self.radio3 = Radiobutton(self.frame3, text='Both', value=2, command=self.validate_both)
+        self.radio3.pack(side='left')
 
         self.window.mainloop()
+
+    def validate_audio(self):
+        self.audio = True
+        self.video = False
+
+    def validate_video(self):
+        self.audio = False
+        self.video = True
+
+    def validate_both(self):
+        self.audio = False
+        self.video = False
 
 
 DownTk()
