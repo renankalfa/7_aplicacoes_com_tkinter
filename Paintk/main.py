@@ -76,7 +76,7 @@ class Paintk:
         self.area_draw.pack(fill='both')
         self.area_draw.bind('<B1-Motion>', self.draw)
 
-        self.window.bind('<F1>', self)
+        # self.window.bind('<F1>', self)
 
         self.window.mainloop()
 
