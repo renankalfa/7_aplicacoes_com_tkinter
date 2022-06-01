@@ -23,6 +23,8 @@ Uma calculadora simples com funções simples. O usuário tanto pode clicar nos 
 
 # 3. App de Desenho
 
+Um aplicativo que permite o usuário desenhar no local designado, além de poder trocar as cores, tamanho e brushs. Como também salvar e começar um novo desenho.
+
 # 4. Donwload de Vídeos
 
 # 5. Reprodutor de Música
