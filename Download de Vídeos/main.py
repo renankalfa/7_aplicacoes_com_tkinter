@@ -12,8 +12,11 @@ class DownTk:
 
         self.img_logo = PhotoImage(file='assets/logo.png')
 
-        self.frame = Frame(self.window, bg='#3b3b3b')
-        self.frame.pack()
+        self.frame = Frame(self.window, bg='black')
+        self.frame.pack(fill='both')
+
+        self.label_logo = Label(self.frame, image=self.img_logo, bg='black')
+        self.label_logo.pack()
 
         self.window.mainloop()
 
