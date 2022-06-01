@@ -76,7 +76,7 @@ class Paintk:
         self.area_draw.pack(fill='both')
         self.area_draw.bind('<B1-Motion>', self.draw)
 
-        # self.window.bind('<F1>', self)
+        self.window.bind('<F1>', self.clean)
 
         self.window.mainloop()
 
@@ -112,10 +112,10 @@ class Paintk:
         self.line_brush = False
         self.eraser_brush = False
 
-    def clean(self, event):
+    def clean(self):
         self.area_draw.delete('all')
 
-    def save(self, event):
+    def save(self):
         x = self.window.winfo_rootx() + self.area_draw.winfo_x()
         y = self.window.winfo_rooty() + self.area_draw.winfo_y()
         x1 = self.window.winfo_rootx() + self.area_draw.winfo_width()
