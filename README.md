@@ -25,6 +25,8 @@ Uma calculadora simples com funções simples. O usuário tanto pode clicar nos 
 
 Um aplicativo que permite o usuário desenhar no local designado, além de poder trocar as cores, tamanho e brushs. Como também salvar e começar um novo desenho.
 
+![paintk](https://user-images.githubusercontent.com/97196457/171485292-5afc8cba-952e-4ac2-abe9-d5b0d3b99b09.png)
+
 # 4. Download de Vídeos
 
 # 5. Reprodutor de Música
@@ -33,7 +35,7 @@ Um aplicativo que permite o usuário desenhar no local designado, além de poder
 
 # 7. Gerar Arquivos Executáveis
 
-# 9. Extras
+# 8. Extras
 
 **Marcado de vida**: no módulo de introdução às classes no tkinter, criei esse app que começa com 20 de vida do personagem e possui as seguintes funcionalidades:
 - Life Potion: o personagem ganha 1 de vida;
