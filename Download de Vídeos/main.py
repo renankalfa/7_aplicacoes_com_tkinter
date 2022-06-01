@@ -1,5 +1,7 @@
 from tkinter import *
-
+import youtube_dl
+import os
+from tkinter import filedialog
 
 class DownTk:
 
@@ -31,8 +33,12 @@ class DownTk:
         self.link.pack(side='left')
 
         self.play = Button(self.frame2, bg='red', text='>', bd=0, fg='white',
-                           command=None, width=5, height=2)
+                           command=lambda: self.download(self.link.get())
+                           , width=5, height=2)
         self.play.pack()
+
+        self.ab = lambda : self.download(self.link.get())
+        print(self.ab)
 
         self.frame3 = Frame(self.window)
         self.frame3.pack()
@@ -59,6 +65,33 @@ class DownTk:
     def validate_both(self):
         self.audio = False
         self.video = False
+
+    def download(self, link):
+        os.system('youtube-dl ' + str(link))
+        self.complete()
+
+    def mensage(self):
+        window = Toplevel()
+        window.title('E R R O')
+        window.resizable(False, False)
+        window.geometry('300x200')
+
+        text = Label(window, text='O link não é valido', font='arial 20 bold', pady=30)
+        text.pack()
+
+        button_exit = Button(window, text='  OK  ', command=window.destroy)
+        button_exit.pack()
+
+    def complete(self):
+        window = Toplevel()
+        window.title('Efetuado')
+        window.resizable(False, False)
+
+        text = Label(window, text='Download Efetuado', pady=30)
+        text.pack()
+
+        button_exit = Button(window, text='  OK  ', command=window.destroy)
+        button_exit.pack()
 
 
 DownTk()
