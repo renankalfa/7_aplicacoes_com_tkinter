@@ -76,7 +76,8 @@ class Paintk:
         self.area_draw.pack(fill='both')
         self.area_draw.bind('<B1-Motion>', self.draw)
 
-        self.window.bind('<F1>', self.clean)
+        self.window.bind('<F1>', self.clean_)
+        self.window.bind('<F2>', self.save_)
 
         self.window.mainloop()
 
@@ -116,6 +117,18 @@ class Paintk:
         self.area_draw.delete('all')
 
     def save(self):
+        x = self.window.winfo_rootx() + self.area_draw.winfo_x()
+        y = self.window.winfo_rooty() + self.area_draw.winfo_y()
+        x1 = self.window.winfo_rootx() + self.area_draw.winfo_width()
+        y1 = self.window.winfo_rooty() + self.area_draw.winfo_height()
+
+        img = pyscreenshot.grab(bbox=(x, y, x1, y1))
+        img.save('image.png', 'png')
+
+    def clean_(self, event):
+        self.area_draw.delete('all')
+
+    def save_(self, event):
         x = self.window.winfo_rootx() + self.area_draw.winfo_x()
         y = self.window.winfo_rooty() + self.area_draw.winfo_y()
         x1 = self.window.winfo_rootx() + self.area_draw.winfo_width()
