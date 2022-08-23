@@ -82,15 +82,22 @@ class MusicPlayer:
         self.list.yview(atual)
 
     def play_music(self):
-        pygame.mixer.music.load(str(self.local) + '/' + str(self.list.get(ANCHOR)))
-        pygame.mixer.music.play()
+        # pygame.mixer.music.load(str(self.local) + '/' + str(self.list.get(ANCHOR)))
+        # pygame.mixer.music.play()
+        self.error_window('Erros dsd')
 
-    def error_window(self):
+    def error_window(self, message):
         window = Toplevel()
         window.title('ERROR')
         window.geometry("300x300+300+300")
         window.resizable(False, False)
         window.config(bg='#444444')
+
+        text = ttk.Label(window, text=str(message))
+        text.pack()
+
+        b_ok = ttk.Button(window, text='Ok', command=window.destroy())
+        b_ok.pack()
 
 
 MusicPlayer()
