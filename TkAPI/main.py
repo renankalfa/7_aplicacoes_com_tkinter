@@ -11,8 +11,10 @@ class movieData:
         self.window.geometry('1280x720+300+150')
         self.window.resizable(False, False)
 
-        self.request = requests.get('')
+        self.request = requests.get('http://www.omdbapi.com/?i=tt3896198&apikey=8afa3b92&')
         self.dict = json.loads(self.request.text)
+
+        print(self.dict)
 
         self.window.mainloop()
 
